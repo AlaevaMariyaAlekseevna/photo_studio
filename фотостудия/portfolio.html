@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img src="img/логотип.svg" alt="PhotoStudio" class="logo-img" onclick="window.location.href='index.html'">
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">ГЛАВНАЯ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">УСЛУГИ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">КОНТАКТЫ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container">
+            <section class="portfolio">
+<div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">Все работы</button>
+    <button class="filter-btn" data-filter="portrait">Портреты</button>
+    <button class="filter-btn" data-filter="family">Семейные</button>
+    <button class="filter-btn" data-filter="wedding">Свадьбы</button>
+    <button class="filter-btn" data-filter="commercial">Коммерческие</button>
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item" data-category="portrait">
+            <div class="portfolio-image">
+                <img src="img/IMG_0627.JPG" alt="Портретная съемка" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+                <h3>Иван Иванов</h3>
+                <p>Портретная съёмка</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item" data-category="family">
+            <div class="portfolio-image">
+                <img src="img/IMG_0628.JPG" alt="Семейная фотосессия" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+                <h3>Анна Смирнова</h3>
+                <p>Семейная съёмка</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item" data-category="wedding">
+            <div class="portfolio-image">
+                <img src="img/IMG_0629.JPG" alt="Свадебная фотография" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+                <h3>Павел Васильев</h3>
+                <p>Свадебная съёмка</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item" data-category="commercial">
+            <div class="portfolio-image">
+                <img src="img/commercial1.jpg" alt="Коммерческая съемка" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+                <h3>Елена Ковалева</h3>
+                <p>Коммерческая съёмка</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item" data-category="portrait">
+            <div class="portfolio-image">
+                <img src="img/portrait2.jpg" alt="Мужской портрет" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+                <h3>Михаил Петров</h3>
+                <p>Портретная съёмка</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item" data-category="family">
+            <div class="portfolio-image">
+                <img src="img/family2.jpg" alt="Семья с детьми" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+                <h3>Дарья Иванова</h3>
+                <p>Семейная съёмка</p>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="img/Логотип.svg" alt="Логотип" class="logo">
+                </div>
+    
+                <div class="footer-section">
+                    <h3 class="footer-title">Политика конфиденциальности</h3>
+                    <p class="footer-text">
+                        <a href="#" class="footer-link">Политика в области обработки персональных данных</a><br>
+                        <a href="#" class="footer-link">Согласие на обработку персональных данных</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">График работы</h3>
+                    <p class="footer-text">пн-вс 10:00 - 22:00</p>
+                </div>
+            </div>
+        </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filterValue = this.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    });</script>
+</body>
+</html>

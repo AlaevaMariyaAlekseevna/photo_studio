@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на съёмку - Photo Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/логотип.svg" alt="PhotoStudio" class="logo-img" onclick="window.location.href='index.html'">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ГЛАВНАЯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">ПОРТФОЛИО</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">УСЛУГИ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="record-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="record-form fade-in">
+                            <h1 class="section-title text-center mb-4" style="color: white;">Забронировать съёмку</h1>
+                            <p class="text-center mb-5 text-white">Заполните форму ниже, и мы свяжемся с вами для подтверждения даты и времени съёмки</p>                  
+                            <form id="bookingForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Ваше имя *</label>
+                                            <input type="text" class="form-control" required placeholder="Иван Иванов">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Телефон *</label>
+                                            <input type="tel" class="form-control" required placeholder="+7 (999) 123-45-67">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="example@mail.ru">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Желаемая дата *</label>
+                                            <input type="date" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Время *</label>
+                                            <select class="form-control" required>
+                                                <option value="">Выберите время</option>
+                                                <option>10:00 - 12:00</option>
+                                                <option>12:00 - 14:00</option>
+                                                <option>14:00 - 16:00</option>
+                                                <option>16:00 - 18:00</option>
+                                                <option>18:00 - 20:00</option>
+                                                <option>20:00 - 22:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Тип съёмки *</label>
+                                    <select class="form-control" required>
+                                        <option value="">Выберите тип съёмки</option>
+                                        <option>Портретная</option>
+                                        <option>Семейная</option>
+                                        <option>Свадебная</option>
+                                        <option>Предметная</option>
+                                        <option>Фэшн</option>
+                                        <option>Коммерческая</option>
+                                        <option>Love Story</option>
+                                        <option>Детская</option>
+                                        <option>Другое</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Выбор фотографа</label>
+                                    <select class="form-control">
+                                        <option value="">Любой доступный фотограф</option>
+                                        <option>Иванов Иван Иванович</option>
+                                        <option>Иванов Павел Васильевич</option>
+                                        <option>Рузин Иван Валерьевич</option>
+                                        <option>Горин Антон Георгеевич</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Дополнительные пожелания</label>
+                                    <textarea class="form-control" rows="4" placeholder="Расскажите о ваших идеях, предпочтениях по стилю, особых пожеланиях..."></textarea>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                                    <label class="form-check-label" for="privacyCheck">
+                                        Я согласен с <a href="#" class="text-decoration-none">политикой конфиденциальности</a> *
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-submit mt-4">
+                                    <i class="bi bi-calendar-check me-2"></i>Забронировать съёмку
+                                </button>
+                            </form>
+                            <div class="text-center mt-4">
+                                <p class="text-white mb-0">Или свяжитесь с нами напрямую:</p>
+                                <div class="social-links justify-content-center mt-3">
+                                    <a href="tel:+79991234567" class="social-link">
+                                        <i class="bi bi-telephone"></i>
+                                    </a>
+                                    <a href="https://wa.me/79991234567" class="social-link">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="https://t.me/photostudio" class="social-link">
+                                        <i class="bi bi-telegram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/Логотип.svg" alt="Логотип" class="logo">
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Политика конфиденциальности</h3>
+                <p class="footer-text">
+                    <a href="#" class="footer-link">Политика в области обработки персональных данных</a><br>
+                    <a href="#" class="footer-link">Согласие на обработку персональных данных</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">График работы</h3>
+                <p class="footer-text">пн-вс 10:00 - 22:00</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Заявка отправлена!';
+            submitBtn.disabled = true;
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+                alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в течение 30 минут для подтверждения деталей съёмки.');
+            }, 2000);
+        });
+        const dateInput = document.querySelector('input[type="date"]');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+    </script>
+</body>
+</html>

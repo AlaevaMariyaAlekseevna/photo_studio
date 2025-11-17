@@ -1,0 +1,127 @@
+/* ===== СЕКЦИЯ "О НАС" ===== */
+.about-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    text-align: justify;
+    position: relative;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 0;
+}
+
+.about-text::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--border-color);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-image {
+    padding-left: 2rem;
+    text-align: center;
+}
+
+.about-image img {
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== СЕКЦИЯ УСЛУГ ===== */
+.services-section {
+    padding: 5rem 0;
+}
+
+/* ===== СЕКЦИЯ ПОРТФОЛИО ===== */
+.portfolio {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+/* ===== СЕКЦИЯ ОТЗЫВОВ ===== */
+.reviews-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+/* ===== СЕКЦИЯ КОНТАКТОВ ===== */
+.contacts-section {
+    padding: 3rem 0 5rem;
+}
+
+/* ===== СЕКЦИЯ КОМАНДЫ ===== */
+.photographers-section {
+    padding: 4rem 0 2rem;
+}
+
+/* ===== СЕКЦИЯ FAQ ===== */
+.accordion-section {
+    margin: 3rem 0;
+}
+
+.accordion-custom .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-custom .accordion-button {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+    font-size: 1.1rem;
+}
+
+.accordion-custom .accordion-button:not(.collapsed) {
+    background-color: #667eea;
+    color: white;
+}
+
+.accordion-custom .accordion-body {
+    padding: 20px;
+    background-color: #fff;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* ===== СЕКЦИЯ КАРТЫ ===== */
+.map-section {
+    margin-top: 3rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    height: 400px;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+}
+
+#leaflet-map {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}

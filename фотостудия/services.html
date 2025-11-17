@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Studio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Услуги - Photo Studio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    </head>
-    <body>
+</head>
+<body>
+    <!-- Header -->
+    <header>
         <div class="container">
-            <div class="logo">
+            <div class="logo text-center py-4">
                 <img src="img/логотип.svg" alt="PhotoStudio" class="logo-img" onclick="window.location.href='index.html'">
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -29,160 +34,184 @@
                             <a class="nav-link" href="portfolio.html">ПОРТФОЛИО</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" href="services.html">УСЛУГИ</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="contacts.html">КОНТАКТЫ</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-<main>
-    <div class="container">
-        <h1 class="section-title">Наши услуги</h1>
-        <p class="text-center mb-5">Профессиональная фотосъемка для любых мероприятий и проектов</p>
-        
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card fade-in">
-                    <div class="service-image">
-                        <i class="bi bi-camera2"></i>
-                        <div>ПОРТРЕТНАЯ СЪЁМКА</div>
-                    </div>
-                    <div class="service-content">
-                        <h3>ПОРТРЕТНАЯ СЪЁМКА</h3>
-                        <div class="service-price">от 5 000 ₽</div>
-                        <ul class="service-features">
-                            <li>Профессиональный свет</li>
-                            <li>2 часа съёмки</li>
-                            <li>10 обработанных фото</li>
-                            <li>Все исходные материалы</li>
-                            <li>Консультация стилиста</li>
-                        </ul>
-                        <a href="record.html" class="btn btn-primary">Забронировать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card fade-in">
-                    <div class="service-image">
-                        <i class="bi bi-people"></i>
-                        <div>СЕМЕЙНАЯ СЪЁМКА</div>
-                    </div>
-                    <div class="service-content">
-                        <h3>СЕМЕЙНАЯ СЪЁМКА</h3>
-                        <div class="service-price">от 8 000 ₽</div>
-                        <ul class="service-features">
-                            <li>До 5 человек</li>
-                            <li>3 часа съёмки</li>
-                            <li>15 обработанных фото</li>
-                            <li>Семейный портрет</li>
-                            <li>Детская зона в студии</li>
-                        </ul>
-                        <a href="record.html" class="btn btn-primary">Забронировать</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <h1 class="section-title">Наши услуги</h1>
+            <p class="text-center mb-5 lead">Профессиональная фотосъемка для любых мероприятий и проектов</p>
+            
+            <!-- Services Grid -->
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="img/Портретная съёмка.jpg" alt="Портретная съемка" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="h5">ПОРТРЕТНАЯ СЪЁМКА</h3>
+                            <div class="service-price">от 5 000 ₽</div>
+                            <ul class="service-features">
+                                <li>Профессиональный свет</li>
+                                <li>2 часа съёмки</li>
+                                <li>10 обработанных фото</li>
+                                <li>Все исходные материалы</li>
+                                <li>Консультация стилиста</li>
+                            </ul>
+                            <a href="record.html" class="btn btn-primary w-100">Забронировать</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card fade-in">
-                    <div class="service-image">
-                        <i class="bi bi-heart"></i>
-                        <div>СВАДЕБНАЯ СЪЁМКА</div>
+                
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="img/Семейная.jpg" alt="Семейная съемка" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="h5">СЕМЕЙНАЯ СЪЁМКА</h3>
+                            <div class="service-price">от 8 000 ₽</div>
+                            <ul class="service-features">
+                                <li>До 5 человек</li>
+                                <li>3 часа съёмки</li>
+                                <li>15 обработанных фото</li>
+                                <li>Семейный портрет</li>
+                                <li>Детская зона в студии</li>
+                            </ul>
+                            <a href="record.html" class="btn btn-primary w-100">Забронировать</a>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h3>СВАДЕБНАЯ СЪЁМКА</h3>
-                        <div class="service-price">от 25 000 ₽</div>
-                        <ul class="service-features">
-                            <li>Весь день съёмки</li>
-                            <li>2 фотографа</li>
-                            <li>50+ обработанных фото</li>
-                            <li>Свадебный альбом</li>
-                            <li>Love-story до свадьбы</li>
-                        </ul>
-                        <a href="record.html" class="btn btn-primary">Забронировать</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="img/Свадебная (4).jpg" alt="Свадебная съемка" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="h5">СВАДЕБНАЯ СЪЁМКА</h3>
+                            <div class="service-price">от 25 000 ₽</div>
+                            <ul class="service-features">
+                                <li>Весь день съёмки</li>
+                                <li>2 фотографа</li>
+                                <li>50+ обработанных фото</li>
+                                <li>Свадебный альбом</li>
+                                <li>Love-story до свадьбы</li>
+                            </ul>
+                            <a href="record.html" class="btn btn-primary w-100">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="img/предметная.jpg" alt="Предметная съемка" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="h5">ПРЕДМЕТНАЯ СЪЁМКА</h3>
+                            <div class="service-price">от 4 000 ₽</div>
+                            <ul class="service-features">
+                                <li>Профессиональный свет</li>
+                                <li>1 час съёмки</li>
+                                <li>5 обработанных фото</li>
+                                <li>Бестеневой фон</li>
+                                <li>Для каталогов и рекламы</li>
+                            </ul>
+                            <a href="record.html" class="btn btn-primary w-100">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="img/фэшн.jpg" alt="Фэшн съемка" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="h5">ФЭШН СЪЁМКА</h3>
+                            <div class="service-price">от 12 000 ₽</div>
+                            <ul class="service-features">
+                                <li>Стилист и визажист</li>
+                                <li>3 часа съёмки</li>
+                                <li>20 обработанных фото</li>
+                                <li>Профессиональный реквизит</li>
+                                <li>Для портфолио моделей</li>
+                            </ul>
+                            <a href="record.html" class="btn btn-primary w-100">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="img/IMG_0629.JPG" alt="Детская съемка" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="h5">ДЕТСКАЯ СЪЁМКА</h3>
+                            <div class="service-price">от 6 000 ₽</div>
+                            <ul class="service-features">
+                                <li>Яркий детский реквизит</li>
+                                <li>2 часа съёмки</li>
+                                <li>12 обработанных фото</li>
+                                <li>Игровая атмосфера</li>
+                                <li>Семейные портреты</li>
+                            </ul>
+                            <a href="record.html" class="btn btn-primary w-100">Забронировать</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-        <main>
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <div class="service-image">
-                                [Изображение вида съёмки]
-                            </div>
-                            <div class="service-content">
-                                <h3>ВИД СЪЁМКИ</h3>
-                                <a href="#" class="btn btn-primary">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <div class="service-image">
-                                [Изображение вида съёмки]
-                            </div>
-                            <div class="service-content">
-                                <h3>ВИД СЪЁМКИ</h3>
-                                <a href="#" class="btn btn-primary">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <div class="service-image">
-                                [Изображение вида съёмки]
-                            </div>
-                            <div class="service-content">
-                                <h3>ВИД СЪЁМКИ</h3>
-                                <a href="#" class="btn btn-primary">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <div class="service-image">
-                                [Изображение вида съёмки]
-                            </div>
-                            <div class="service-content">
-                                <h3>ВИД СЪЁМКИ</h3>
-                                <a href="#" class="btn btn-primary">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <div class="service-image">
-                                [Изображение вида съёмки]
-                            </div>
-                            <div class="service-content">
-                                <h3>ВИД СЪЁМКИ</h3>
-                                <a href="#" class="btn btn-primary">Подробнее</a>
-                            </div>
-                        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo">
+                        <img src="img/Логотип.svg" alt="Логотип" class="img-fluid" style="max-width: 150px;">
                     </div>
                 </div>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="img/Логотип.svg" alt="Логотип" class="logo">
-                </div>
-                <div class="footer-section">
-                    <h3 class="footer-title">Политика конфиденциальности</h3>
-                    <p class="footer-text">
-                        <a href="#" class="footer-link">Политика в области обработки персональных данных</a><br>
-                        <a href="#" class="footer-link">Согласие на обработку персональных данных</a>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <h3 class="footer-title h5 mb-3">Политика конфиденциальности</h3>
+                    <p class="footer-text mb-0">
+                        <a href="#" class="footer-link text-decoration-none">Политика обработки данных</a><br>
+                        <a href="#" class="footer-link text-decoration-none">Согласие на обработку данных</a>
                     </p>
                 </div>
-                <div class="footer-section">
-                    <h3 class="footer-title">График работы</h3>
-                    <p class="footer-text">пн-вс 10:00 - 22:00</p>
+                <div class="col-md-4 text-center text-md-end">
+                    <h3 class="footer-title h5 mb-3">График работы</h3>
+                    <p class="footer-text mb-0">пн-вс 10:00 - 22:00</p>
                 </div>
             </div>
-        </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="copyright mb-0">&copy; 2024 Photo Studio. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

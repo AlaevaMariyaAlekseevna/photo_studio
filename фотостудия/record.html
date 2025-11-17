@@ -4,50 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Запись на съёмку - Photo Studio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="img/логотип.svg" alt="PhotoStudio" class="logo-img" onclick="window.location.href='index.html'">
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <!-- Header -->
+    <header>
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">ГЛАВНАЯ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">ПОРТФОЛИО</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">УСЛУГИ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">КОНТАКТЫ</a>
-                    </li>
-                </ul>
+            <div class="logo text-center py-4">
+                <img src="img/логотип.svg" alt="PhotoStudio" class="logo-img" onclick="window.location.href='index.html'">
             </div>
         </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">ГЛАВНАЯ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">ПОРТФОЛИО</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">УСЛУГИ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacts.html">КОНТАКТЫ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
     <main>
-        <section class="record-section">
+        <section class="record-section py-5">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-xl-6">
                         <div class="record-form fade-in">
-                            <h1 class="section-title text-center mb-4" style="color: white;">Забронировать съёмку</h1>
-                            <p class="text-center mb-5 text-white">Заполните форму ниже, и мы свяжемся с вами для подтверждения даты и времени съёмки</p>                  
+                            <h1 class="section-title text-center mb-4">Забронировать съёмку</h1>
+                            <p class="text-center mb-4 text-muted">Заполните форму ниже, и мы свяжемся с вами для подтверждения даты и времени съёмки</p>                  
+                            
                             <form id="bookingForm">
-                                <div class="row">
+                                <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Ваше имя *</label>
@@ -61,11 +70,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="form-group">
                                     <label class="form-label">Email</label>
                                     <input type="email" class="form-control" placeholder="example@mail.ru">
                                 </div>
-                                <div class="row">
+                                
+                                <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Желаемая дата *</label>
@@ -87,6 +98,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="form-group">
                                     <label class="form-label">Тип съёмки *</label>
                                     <select class="form-control" required>
@@ -102,6 +114,7 @@
                                         <option>Другое</option>
                                     </select>
                                 </div>
+                                
                                 <div class="form-group">
                                     <label class="form-label">Выбор фотографа</label>
                                     <select class="form-control">
@@ -112,23 +125,27 @@
                                         <option>Горин Антон Георгеевич</option>
                                     </select>
                                 </div>
+                                
                                 <div class="form-group">
                                     <label class="form-label">Дополнительные пожелания</label>
                                     <textarea class="form-control" rows="4" placeholder="Расскажите о ваших идеях, предпочтениях по стилю, особых пожеланиях..."></textarea>
                                 </div>
+                                
                                 <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="privacyCheck" required>
                                     <label class="form-check-label" for="privacyCheck">
                                         Я согласен с <a href="#" class="text-decoration-none">политикой конфиденциальности</a> *
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-submit mt-4">
+                                
+                                <button type="submit" class="btn btn-submit mt-4 w-100">
                                     <i class="bi bi-calendar-check me-2"></i>Забронировать съёмку
                                 </button>
                             </form>
+                            
                             <div class="text-center mt-4">
-                                <p class="text-white mb-0">Или свяжитесь с нами напрямую:</p>
-                                <div class="social-links justify-content-center mt-3">
+                                <p class="text-white mb-2">Или свяжитесь с нами напрямую:</p>
+                                <div class="social-links d-flex justify-content-center gap-3">
                                     <a href="tel:+79991234567" class="social-link">
                                         <i class="bi bi-telephone"></i>
                                     </a>
@@ -146,32 +163,51 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="img/Логотип.svg" alt="Логотип" class="logo">
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo">
+                        <img src="img/Логотип.svg" alt="Логотип" class="img-fluid" style="max-width: 150px;">
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <h3 class="footer-title h5 mb-3">Политика конфиденциальности</h3>
+                    <p class="footer-text mb-0">
+                        <a href="#" class="footer-link text-decoration-none">Политика обработки данных</a><br>
+                        <a href="#" class="footer-link text-decoration-none">Согласие на обработку данных</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <h3 class="footer-title h5 mb-3">График работы</h3>
+                    <p class="footer-text mb-0">пн-вс 10:00 - 22:00</p>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3 class="footer-title">Политика конфиденциальности</h3>
-                <p class="footer-text">
-                    <a href="#" class="footer-link">Политика в области обработки персональных данных</a><br>
-                    <a href="#" class="footer-link">Согласие на обработку персональных данных</a>
-                </p>
-            </div>
-            <div class="footer-section">
-                <h3 class="footer-title">График работы</h3>
-                <p class="footer-text">пн-вс 10:00 - 22:00</p>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="copyright mb-0">&copy; 2024 Photo Studio. Все права защищены.</p>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form Script -->
     <script>
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
+            
+            // Show success state
             submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Заявка отправлена!';
             submitBtn.disabled = true;
+            
+            // Reset form after 2 seconds
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
@@ -179,6 +215,8 @@
                 alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в течение 30 минут для подтверждения деталей съёмки.');
             }, 2000);
         });
+
+        // Set minimum date to today
         const dateInput = document.querySelector('input[type="date"]');
         const today = new Date().toISOString().split('T')[0];
         dateInput.min = today;

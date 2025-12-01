@@ -1,0 +1,208 @@
+/* ===== АДАПТИВНЫЕ СТИЛИ ===== */
+
+/* Очень маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        height: 40vh;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title::after {
+        width: 40px;
+        height: 2px;
+        margin: 10px auto;
+    }
+    
+    .lead {
+        font-size: 0.9rem;
+    }
+    
+    /* Карточки */
+    .service-card,
+    .portfolio-item,
+    .review-card,
+    .photographer-card,
+    .contact-item {
+        margin-bottom: 1rem;
+    }
+    
+    .service-content,
+    .portfolio-info {
+        padding: 1rem;
+    }
+    
+    .service-content h3,
+    .portfolio-info h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .service-price {
+        font-size: 1.2rem;
+    }
+    
+    /* Изображения */
+    .service-image,
+    .portfolio-image {
+        height: 150px !important;
+    }
+    
+    .about-image img {
+        max-height: 250px;
+    }
+    
+    /* Текст */
+    .about-text {
+        padding: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .about-text::before {
+        font-size: 2.5rem;
+        top: 5px;
+        left: 10px;
+    }
+    
+    /* Кнопки */
+    .btn-booking,
+    .btn-primary,
+    .btn-submit {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        margin: 0 2px 5px;
+        font-size: 0.7rem;
+    }
+    
+    /* Формы */
+    .record-form {
+        padding: 1.5rem 1rem;
+    }
+    
+    .form-control,
+    .form-select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    /* Навигация */
+    .navbar-nav {
+        gap: 10px;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.7rem;
+        margin: 0 5px;
+    }
+    
+    .logo-img {
+        max-width: 120px;
+    }
+    
+    /* Футер */
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer-title {
+        font-size: 1rem;
+    }
+    
+    .footer-text {
+        font-size: 0.8rem;
+    }
+    
+    /* Иконки */
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .contact-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Accordion */
+    .accordion-custom .accordion-button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .accordion-custom .accordion-body {
+        padding: 15px;
+    }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Текст */
+    .about-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    /* Сетка карточек */
+    .service-card,
+    .portfolio-item {
+        max-width: 100%;
+    }
+    
+    /* Форма бронирования */
+    .record-form h1 {
+        font-size: 1.8rem;
+    }
+    
+    .record-form p.text-muted {
+        font-size: 0.9rem;
+    }
+    
+    /* Карта */
+    .map-section {
+        height: 300px;
+    }
+}
+
+/* Планшеты (до 992px) */
+@media (max-width: 992px) {
+    /* Уменьшаем размеры изображений в карточках */
+    .service-image {
+        height: 200px;
+    }
+    
+    .portfolio-image {
+        height: 250px;
+    }
+    
+    /* Уменьшаем отступы */
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    /* Компактнее делаем секции */
+    .about-section,
+    .services-section,
+    .portfolio,
+    .reviews-section {
+        padding: 3rem 0 !important;
+    }
+}

@@ -1,0 +1,42 @@
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 768px) {
+    /* Улучшаем читаемость текста */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Убираем горизонтальную прокрутку */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* Улучшаем touch-цели */
+    .btn, 
+    .nav-link,
+    .filter-btn,
+    .social-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Увеличиваем интервалы для удобного нажатия */
+    .form-control,
+    .form-select,
+    textarea {
+        font-size: 16px !important; /* Предотвращает масштабирование iOS */
+    }
+    
+    /* Улучшаем видимость активных элементов */
+    .nav-link.active,
+    .filter-btn.active {
+        font-weight: bold;
+    }
+    
+    /* Оптимизация производительности */
+    .service-card:hover,
+    .portfolio-item:hover {
+        transform: none; /* Отключаем hover-эффекты на мобильных */
+    }
+}

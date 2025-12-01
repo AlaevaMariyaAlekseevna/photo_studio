@@ -1,0 +1,284 @@
+/* ===== КАРТОЧКИ УСЛУГ ===== */
+.service-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+    position: relative;
+    border: none;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.service-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.service-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 1rem 0;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.service-features li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* ===== КАРТОЧКИ ПОРТФОЛИО ===== */
+.portfolio-item {
+    background: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.4s ease;
+    height: 100%;
+    border: none;
+    margin-bottom: 1.5rem;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.portfolio-item.hidden {
+    display: none !important;
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.portfolio-item:not(.hidden) {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.portfolio-image {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.portfolio-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.portfolio-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ===== КАРТОЧКИ ОТЗЫВОВ ===== */
+.review-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    height: 100%;
+    transition: transform 0.3s;
+    border-left: 4px solid transparent;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    border-left-color: #667eea;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    line-height: 1.7;
+    position: relative;
+}
+
+.review-text::before {
+    font-size: 3rem;
+    color: var(--border-color);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+}
+
+/* ===== КАРТОЧКИ ФОТОГРАФОВ ===== */
+.photographer-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.photographer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient);
+}
+
+.photographer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.photographer-details {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    display: none;
+}
+
+.photographer-details.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.specialty-tag {
+    background: var(--gradient);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: none;
+}
+/* Адаптивность карточек */
+@media (max-width: 768px) {
+    .service-card,
+    .portfolio-item,
+    .review-card {
+        margin-bottom: 1rem;
+    }
+    
+    .service-content h3,
+    .portfolio-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .service-features li {
+        font-size: 0.9rem;
+        padding: 3px 0 3px 18px;
+    }
+    
+    .review-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .author-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .photographer-card {
+        padding: 1rem;
+    }
+    
+    .photographer-name {
+        font-size: 0.95rem;
+    }
+    
+    .specialty-tag {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+}

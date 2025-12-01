@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --accent-color: #000;
+    --light-color: #f8f9fa;
+    --border-color: #eaeaea;
+    --text-light: #ccc;
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --border-radius: 20px;
+    --transition: all 0.3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    line-height: 1.6;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+p {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+.lead {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.text-center {
+    text-align: center;
+}
+.text-muted {
+    color: var(--secondary-color) !important;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+.pulse {
+    animation: pulse 2s infinite;
+}
+.rounded {
+    border-radius: var(--border-radius) !important;
+}
+.shadow {
+    box-shadow: var(--shadow) !important;
+}
+.transition {
+    transition: var(--transition);
+}
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
+}
+.text-decoration-none {
+    text-decoration: none;
+}
+
+/* Специальные стили для сетки портфолио */
+.portfolio-grid {
+    min-height: 500px;
+}
